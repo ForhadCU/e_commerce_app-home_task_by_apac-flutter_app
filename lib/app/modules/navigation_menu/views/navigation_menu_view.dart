@@ -26,8 +26,8 @@ class NavigationMenuView extends GetView<NavigationMenuController> {
                   : MyColors.black.withOpacity(.1),
               destinations: const [
                 NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-                NavigationDestination(icon: Icon(Iconsax.heart), label: 'Cart'),
-                NavigationDestination(icon: Icon(Iconsax.shop), label: 'Order'),
+                NavigationDestination(icon: Icon(Iconsax.shopping_cart), label: 'Cart'),
+                NavigationDestination(icon: Icon(Iconsax.wallet_check), label: 'Order'),
               ])),
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
