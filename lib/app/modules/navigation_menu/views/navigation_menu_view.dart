@@ -20,14 +20,16 @@ class NavigationMenuView extends GetView<NavigationMenuController> {
               selectedIndex: controller.selectedIndex.value,
               onDestinationSelected: (newIndex) =>
                   controller.selectedIndex.value = newIndex,
-              backgroundColor: darkMode ? MyColors.black : Colors.white,
+              backgroundColor: darkMode ? MyColors.dark : MyColors.light,
               indicatorColor: darkMode
                   ? MyColors.white.withOpacity(.1)
                   : MyColors.black.withOpacity(.1),
               destinations: const [
                 NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-                NavigationDestination(icon: Icon(Iconsax.shopping_cart), label: 'Cart'),
-                NavigationDestination(icon: Icon(Iconsax.wallet_check), label: 'Order'),
+                NavigationDestination(
+                    icon: Icon(Iconsax.wallet_check), label: 'Order'),
+                NavigationDestination(
+                    icon: Icon(Iconsax.notification), label: 'Notification'),
               ])),
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
