@@ -11,9 +11,15 @@ class MyDeviceUtils {
     FocusScope.of(context).requestFocus(FocusNode());
   }
 
-  static Future<void> setStatuBarColor(Color color) async {
+  static void setStatuBarColor(Color color) async {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: color));
+  }
+
+  static void setDarkStatuBar() async {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.dark));
   }
 
   static bool isLandscapeOrientation(BuildContext context) {

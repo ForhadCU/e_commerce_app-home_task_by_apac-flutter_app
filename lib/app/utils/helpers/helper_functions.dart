@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -59,6 +58,4 @@ class MyHelperFunctions {
   static List<T> removeDuplicates<T>(List<T> list) {
     return list.toSet().toList();
   }
-
-  
 }
